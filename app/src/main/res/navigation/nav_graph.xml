@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/startFragment">
+
+    <fragment
+        android:id="@+id/startFragment"
+        android:name="com.example.projetoparalelo.ui.StartFragment"
+        android:label="fragment_start"
+        tools:layout="@layout/fragment_start" >
+        <action
+            android:id="@+id/action_startFragment_to_movieHomeFragment"
+            app:destination="@id/movieHomeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/movieHomeFragment"
+        android:name="com.example.projetoparalelo.ui.MovieHomeFragment"
+        android:label="fragment_movie_home"
+        tools:layout="@layout/fragment_movie_home" >
+        <action
+            android:id="@+id/action_movieHomeFragment_to_movieDetailFragment"
+            app:destination="@id/movieDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/movieDetailFragment"
+        android:name="com.example.projetoparalelo.ui.MovieDetailFragment"
+        android:label="fragment_movie_detail"
+        tools:layout="@layout/fragment_movie_detail" />
+</navigation>
